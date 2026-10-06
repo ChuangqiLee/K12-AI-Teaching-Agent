@@ -1,0 +1,9 @@
+# Mandarin classroom deployment: MockingBird (Chinese fork of Real-Time-Voice-Cloning).
+# Usage: python -m k12agent --config configs/zh_mockingbird.yaml ask "勾股定理是怎么推导出来的？" --grade 8
+language: zh
+speech:
+  backend: rtvc
+  repo_dir: third_party/MockingBird
+  encoder_ckpt: third_party/MockingBird/data/ckpt/encoder/pretrained.pt
+  synthesizer_ckpt: third_party/MockingBird/data/ckpt/synthesizer/pretrained/pretrained.pt
+  vocoder_ckpt: third_party/MockingBird/data/ckpt/vocoder/pretrained/g_hifigan.pt

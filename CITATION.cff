@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "K-12 AI Teaching Agent"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Liu
+    given-names: Hui
+    orcid: "https://orcid.org/0000-0002-9607-8069"
+  - family-names: Li
+    given-names: Chuangqi
+    orcid: "https://orcid.org/0009-0002-1373-2764"
+  - family-names: Liu
+    given-names: Ziyu
+  - family-names: Yang
+    given-names: Shuxiao
+  - family-names: Wang
+    given-names: Hao
+  - family-names: Yan
+    given-names: Pengrong
+preferred-citation:
+  type: article
+  title: "Designing Multimodal Human-Computer Interaction for K-12 Learning: Research Design, System Architecture, and Field Evaluation of an AI Teaching Agent"
+  journal: "International Journal of Human-Computer Interaction"
+  year: 2026
+  doi: "10.1080/10447318.2026.2616662"
+  authors:
+    - family-names: Liu
+      given-names: Hui
+    - family-names: Li
+      given-names: Chuangqi
+    - family-names: Liu
+      given-names: Ziyu
+    - family-names: Yang
+      given-names: Shuxiao
+    - family-names: Wang
+      given-names: Hao
+    - family-names: Yan
+      given-names: Pengrong

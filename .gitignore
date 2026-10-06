@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# generated artefacts
+outputs/
+results/
+results_*/
+checkpoints/
+analysis/data/synthetic_scores_DEMO_ONLY.csv
+
+# third-party repos and model weights (fetched by scripts/setup_third_party.sh)
+third_party/
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# participant data - never commit identifiable student data
+data/private/
+*.private.csv
+
+# the published article (copyright Taylor & Francis)
+*.pdf

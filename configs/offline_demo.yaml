@@ -1,0 +1,7 @@
+# Runs on any laptop: knowledge-graph content, silent narration, static avatar.
+content:
+  backend: template
+speech:
+  backend: dummy
+video:
+  backend: none

@@ -1,0 +1,13 @@
+stage,grade,region,condition,n,mean,sd,source
+primary,5,rural,traditional,25,94.41,2.85,Table 3
+primary,5,urban,traditional,25,92.86,3.88,Table 3
+primary,5,rural,ai_agent,25,96.62,2.37,Table 3
+primary,5,urban,ai_agent,25,95.77,2.21,Table 3
+junior,8,rural,traditional,25,84.70,6.27,Table 4
+junior,8,urban,traditional,25,86.47,6.26,Table 4
+junior,8,rural,ai_agent,25,89.86,7.12,Table 4
+junior,8,urban,ai_agent,25,89.49,4.97,Table 4
+senior,11,rural,traditional,25,75.43,9.98,Table 5
+senior,11,urban,traditional,25,73.49,12.23,Table 5
+senior,11,rural,ai_agent,25,66.82,16.27,Table 5
+senior,11,urban,ai_agent,25,63.23,12.43,Table 5

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k12agent"
+version = "1.0.0"
+description = "Multimodal AI teaching agent for K-12 mathematics (LLaMA + voice cloning + Wav2Lip) and the analysis code of its field evaluation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Hui Liu" }, { name = "Chuangqi Li" }, { name = "Ziyu Liu" },
+  { name = "Shuxiao Yang" }, { name = "Hao Wang" }, { name = "Pengrong Yan" },
+]
+dependencies = [
+  "numpy>=1.23", "scipy>=1.10", "pandas>=1.5", "pyyaml>=6.0", "pillow>=9.5", "matplotlib>=3.7",
+  "python-pptx>=0.6.21", "sympy>=1.12", "torch>=2.0", "torchvision>=0.15", "librosa>=0.10",
+  "soundfile>=0.12", "opencv-python>=4.8", "imageio-ffmpeg>=0.4.9", "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+llm = ["transformers>=4.36", "accelerate>=0.25", "peft>=0.7", "datasets>=2.15", "sentencepiece>=0.1.99",
+       "bitsandbytes>=0.41; platform_system == 'Linux'"]
+ui = ["gradio>=4.0"]
+tracking = ["mediapipe>=0.10"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+k12agent = "k12agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["k12agent*", "analysis*"]
+
+[tool.setuptools.package-data]
+k12agent = ["content/data/*.json", "adaptive/data/*.json"]
+analysis = ["data/*.csv", "templates/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::FutureWarning", "ignore::DeprecationWarning"]

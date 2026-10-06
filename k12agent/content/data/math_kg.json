@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "description": "Minimal mathematics knowledge graph for the three experimental units (Table 2): Nature of Fractions (Grade 5), Pythagorean Theorem (Grade 8), Concept of Derivatives (Grade 11). Extend with your own curriculum nodes.",
+  "nodes": [
+    {
+      "id": "fraction_compare",
+      "stage": "primary",
+      "topic": {"zh": "分数的意义与大小比较", "en": "Nature and comparison of fractions"},
+      "keywords": ["分数", "分子", "分母", "比较", "蛋糕", "fraction", "numerator", "denominator", "compare", "1/4", "2/4"],
+      "concepts": {"zh": ["分数", "分子", "分母", "同分母比较"], "en": ["fraction", "numerator", "denominator", "same-denominator comparison"]},
+      "prerequisites": [],
+      "definition": {
+        "zh": "把一个整体平均分成若干份，表示这样的一份或几份的数叫做分数。下面的数叫分母，表示平均分成几份；上面的数叫分子，表示取了几份。",
+        "en": "When a whole is divided into equal parts, a fraction names one or more of those parts. The bottom number (denominator) tells how many equal parts; the top number (numerator) tells how many parts are taken."
+      },
+      "derivation": {
+        "zh": ["1/4 和 2/4 的分母都是 4，说明蛋糕都被平均分成了 4 份。", "分母相同时，只需要比较分子：小明的分子是 1，小红的分子是 2。", "因为 2 > 1，所以 2/4 > 1/4。"],
+        "en": ["Both 1/4 and 2/4 have denominator 4: the cake is cut into 4 equal parts.", "With the same denominator we only compare numerators: 1 versus 2.", "Since 2 > 1, we get 2/4 > 1/4."]
+      },
+      "formulas": ["\\frac{2}{4} > \\frac{1}{4}", "\\frac{a}{n} > \\frac{b}{n} \\iff a > b"],
+      "applications": {
+        "zh": ["小明吃了一个蛋糕的 1/4，小红吃了蛋糕的 2/4，谁吃得更多？小红吃得更多。", "分披萨、分水果时判断谁分得多。"],
+        "en": ["Xiaoming ate 1/4 of a cake and Xiaohong ate 2/4. Xiaohong ate more.", "Sharing pizza or fruit fairly."]
+      },
+      "extension": {"zh": "分母不同的分数可以先通分再比较，例如 1/2 与 2/3。", "en": "Fractions with different denominators can be compared after finding a common denominator, e.g. 1/2 vs 2/3."}
+    },
+    {
+      "id": "fraction_add_sub",
+      "stage": "primary",
+      "topic": {"zh": "同分母分数的加减法", "en": "Adding and subtracting fractions with like denominators"},
+      "keywords": ["分数加法", "分数减法", "加", "减", "add", "subtract", "fraction"],
+      "concepts": {"zh": ["同分母分数", "分子相加减"], "en": ["like denominators", "add numerators"]},
+      "prerequisites": ["fraction_compare"],
+      "definition": {"zh": "同分母分数相加减，分母不变，分子相加减。", "en": "To add or subtract fractions with the same denominator, keep the denominator and add or subtract the numerators."},
+      "derivation": {"zh": ["1/5 表示 1 份，2/5 表示 2 份。", "合起来是 1 + 2 = 3 份，每份仍然是五分之一。", "所以 1/5 + 2/5 = 3/5。"], "en": ["1/5 is one part and 2/5 is two parts.", "Together they make 1 + 2 = 3 parts of the same size.", "So 1/5 + 2/5 = 3/5."]},
+      "formulas": ["\\frac{a}{n} + \\frac{b}{n} = \\frac{a+b}{n}", "\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}"],
+      "applications": {"zh": ["一根绳子用去 2/7，又用去 3/7，一共用去 5/7。"], "en": ["A rope: 2/7 used, then 3/7 more; 5/7 used in total."]},
+      "extension": {"zh": "异分母分数加减需要先通分。", "en": "Unlike denominators require a common denominator first."}
+    },
+    {
+      "id": "pythagorean",
+      "stage": "junior",
+      "topic": {"zh": "勾股定理", "en": "The Pythagorean theorem"},
+      "keywords": ["勾股", "直角三角形", "斜边", "直角边", "毕达哥拉斯", "pythagorean", "right triangle", "hypotenuse", "a^2+b^2"],
+      "concepts": {"zh": ["直角三角形", "直角边", "斜边", "面积法证明"], "en": ["right triangle", "legs", "hypotenuse", "area proof"]},
+      "prerequisites": ["square_area"],
+      "definition": {
+        "zh": "在任何一个平面直角三角形中，两直角边的平方之和一定等于斜边的平方。在 Rt△ABC 中，∠C = 90°，则 a² + b² = c²。",
+        "en": "In every right triangle, the sum of the squares of the two legs equals the square of the hypotenuse: if angle C = 90°, then a² + b² = c²."
+      },
+      "derivation": {
+        "zh": ["用四个全等的直角三角形（直角边 a、b，斜边 c）拼成一个边长为 a + b 的大正方形，中间留出一个边长为 c 的小正方形。", "大正方形面积有两种算法：(a + b)² 或者 4 × (1/2)ab + c²。", "两式相等：a² + 2ab + b² = 2ab + c²。", "两边同时减去 2ab，得到 a² + b² = c²。"],
+        "en": ["Arrange four congruent right triangles (legs a, b; hypotenuse c) inside a square of side a + b, leaving an inner square of side c.", "Compute the big square's area two ways: (a + b)² and 4·(1/2)ab + c².", "Equate: a² + 2ab + b² = 2ab + c².", "Subtract 2ab from both sides: a² + b² = c²."]
+      },
+      "formulas": ["a^2 + b^2 = c^2", "(a+b)^2 = 4\\cdot\\frac{1}{2}ab + c^2"],
+      "applications": {
+        "zh": ["建筑工人用 3、4、5 的绳结检验墙角是否为直角。", "导航中计算两点之间的直线距离。"],
+        "en": ["Builders check right angles with a 3-4-5 knotted rope.", "Navigation: straight-line distance between two points."]
+      },
+      "extension": {"zh": "推广到三维空间：长方体的体对角线 d² = a² + b² + c²。", "en": "Generalisation to three-dimensional space: the space diagonal of a box satisfies d² = a² + b² + c²."}
+    },
+    {
+      "id": "square_area",
+      "stage": "primary",
+      "topic": {"zh": "正方形的面积", "en": "Area of a square"},
+      "keywords": ["正方形面积", "square area"],
+      "concepts": {"zh": ["正方形", "面积"], "en": ["square", "area"]},
+      "prerequisites": [],
+      "definition": {"zh": "边长为 a 的正方形面积为 a²。", "en": "A square with side a has area a²."},
+      "derivation": {"zh": ["把正方形分成 a 行 a 列的单位小方格。", "共有 a × a 个小方格。"], "en": ["Split the square into a rows and a columns of unit squares.", "There are a × a unit squares."]},
+      "formulas": ["S = a^2"],
+      "applications": {"zh": ["计算教室地面需要多少块方砖。"], "en": ["How many square tiles cover a classroom floor."]},
+      "extension": null
+    },
+    {
+      "id": "derivative_concept",
+      "stage": "senior",
+      "topic": {"zh": "导数的概念", "en": "The concept of the derivative"},
+      "keywords": ["导数", "变化率", "切线", "极限", "瞬时速度", "derivative", "rate of change", "tangent", "limit", "f'(x)"],
+      "concepts": {"zh": ["平均变化率", "瞬时变化率", "极限", "切线斜率"], "en": ["average rate of change", "instantaneous rate of change", "limit", "slope of tangent"]},
+      "prerequisites": ["limit_concept"],
+      "definition": {
+        "zh": "函数 y = f(x) 在 x = x₀ 处的导数是平均变化率 Δy/Δx 在 Δx → 0 时的极限，几何意义是曲线在该点切线的斜率。",
+        "en": "The derivative of y = f(x) at x₀ is the limit of the average rate of change Δy/Δx as Δx → 0; geometrically it is the slope of the tangent line at that point."
+      },
+      "derivation": {
+        "zh": ["第一步：写出平均变化率 [f(x₀ + Δx) − f(x₀)] / Δx。", "第二步：以 f(x) = x² 为例，代入得 [(x₀ + Δx)² − x₀²] / Δx。", "第三步：展开分子 x₀² + 2x₀Δx + (Δx)² − x₀² = 2x₀Δx + (Δx)²。", "第四步：约去 Δx（Δx ≠ 0），得到 2x₀ + Δx。", "第五步：令 Δx → 0，极限为 2x₀，所以 f'(x₀) = 2x₀。"],
+        "en": ["Step 1: average rate of change [f(x₀ + Δx) − f(x₀)] / Δx.", "Step 2: for f(x) = x², substitute to get [(x₀ + Δx)² − x₀²] / Δx.", "Step 3: expand the numerator: 2x₀Δx + (Δx)².", "Step 4: cancel Δx (Δx ≠ 0): 2x₀ + Δx.", "Step 5: let Δx → 0; the limit is 2x₀, so f'(x₀) = 2x₀."]
+      },
+      "formulas": ["f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0+\\Delta x)-f(x_0)}{\\Delta x}", "(x^2)' = 2x", "\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1"],
+      "applications": {
+        "zh": ["物体位移 s(t) = 5t²，在 t = 2 秒时的瞬时速度为 s'(2) = 20 m/s。", "求曲线 y = x² 在点 (1, 1) 处的切线方程：y = 2x − 1。"],
+        "en": ["Position s(t) = 5t²; the instantaneous velocity at t = 2 s is s'(2) = 20 m/s.", "Tangent to y = x² at (1, 1): y = 2x − 1."]
+      },
+      "extension": {"zh": "导数的运算法则与复合函数求导（链式法则）。", "en": "Differentiation rules and the chain rule for composite functions."}
+    },
+    {
+      "id": "limit_concept",
+      "stage": "senior",
+      "topic": {"zh": "极限的概念", "en": "The concept of a limit"},
+      "keywords": ["极限", "趋近", "limit", "approaches"],
+      "concepts": {"zh": ["极限", "无限趋近"], "en": ["limit", "approaching"]},
+      "prerequisites": [],
+      "definition": {"zh": "当自变量无限趋近某个值时，函数值无限趋近的确定常数叫做函数的极限。", "en": "A limit is the value a function approaches as its input approaches a given point."},
+      "derivation": {"zh": ["观察 x = 0.1, 0.01, 0.001 时 sin x / x 的取值。", "取值越来越接近 1。", "因此 lim_{x→0} sin x / x = 1。"], "en": ["Evaluate sin x / x at x = 0.1, 0.01, 0.001.", "The values get closer and closer to 1.", "Hence lim_{x→0} sin x / x = 1."]},
+      "formulas": ["\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1"],
+      "applications": {"zh": ["用极限思想计算圆的面积（割圆术）。"], "en": ["Liu Hui's polygon method for the area of a circle."]},
+      "extension": null
+    }
+  ]
+}

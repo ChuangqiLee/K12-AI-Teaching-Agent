@@ -1,0 +1,31 @@
+# core
+numpy>=1.23
+scipy>=1.10
+pandas>=1.5
+pyyaml>=6.0
+pillow>=9.5
+matplotlib>=3.7
+python-pptx>=0.6.21
+sympy>=1.12
+# deep learning
+torch>=2.0
+torchvision>=0.15
+# content generation (LLaMA-2-13B + LoRA)
+transformers>=4.36
+accelerate>=0.25
+peft>=0.7
+datasets>=2.15
+sentencepiece>=0.1.99
+bitsandbytes>=0.41; platform_system == "Linux"
+# speech / video
+librosa>=0.10
+soundfile>=0.12
+opencv-python>=4.8
+imageio-ffmpeg>=0.4.9
+# statistics
+statsmodels>=0.14
+# UI and tracking
+gradio>=4.0
+mediapipe>=0.10; python_version < "3.13"
+# tests
+pytest>=7.4
